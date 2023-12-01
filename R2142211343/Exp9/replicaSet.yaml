@@ -1,0 +1,33 @@
+apiVersion: apps/v1 
+
+kind: ReplicaSet 
+
+metadata: 
+
+  name: my-image
+
+spec: 
+
+  replicas: 6
+
+  selector: 
+
+    matchLabels: 
+
+      app: alpine
+
+  template: 
+
+    metadata: 
+
+      labels: 
+
+        app: alpine 
+
+    spec: 
+
+      containers: 
+
+      - name: apline 
+
+        image: alpine 
